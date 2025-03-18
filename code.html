@@ -11,23 +11,30 @@
     <button onclick="factorialOutput.value=factorial(factorialInput.value)">Calculate factorial</button>
     <div id="resultFactorial"></div>
 
-  <h2>Fibonacci sequence calculator</h2>
-  <input type="number" id="fibonacciInput" min="0">
-  <input type="number" id="fibonacciOuput">
-  <button onclick="fibonacciOutput.value=fibonacci(fibonacciInput.value)">Calculate Fibonacci term</button>
-  <div id="resultFibonacci"></div>
 <script>
         function factorial(n) {
             if (n < 0) return -1;
             if (n === 0) return 1;
             return n * factorial(n - 1);
         }
-  function fibonacci(n) {
-    if (n < 0) return -1;
-    if (n === 0) return 0;
-    if (n === 1) return 1;
-    return fibonacci(n - 1) + fibonacci(n - 2);
-  }
+    </script>
+</body>
+    <body>
+        <Br>
+        <bR>
+        <br>
+    <h2>Fibonacci Calculator</h2>
+    <input type="number" id="fibonacciInput" min="1">
+    <input type="number" id="fibonacciOutput">
+    <button onclick="fibonacciOutput.value=fibonacci(fibonacciInput.value)">Calculate</button>
+    <div id="result"></div>
+<script>
+        function fibonacci(n) {
+            if (n < 1) return 0;
+            if (n === 1) return 1;
+            if (n === 2) return 1;
+            return fibonacci(n-1)+fibonacci(n-2);
+        }
     </script>
 </body>
 </html>
