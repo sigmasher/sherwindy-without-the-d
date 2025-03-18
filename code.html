@@ -1,22 +1,33 @@
-<html>
-  <head>
-    <script>
-      function factorial(inti)
-        {
-          if(i==1)
-          {
-            return 1;
-          }else
-          {
-            return i*factorial(i-1);
-          }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursive Method Calculator</title>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+    <input type="number" id="factorialInput" min="0">
+    <input type="number" id="factorialOutput">
+    <button onclick="factorialOutput.value=factorial(factorialInput.value)">Calculate factorial</button>
+    <div id="resultFactorial"></div>
+
+  <h2>Fibonacci sequence calculator</h2>
+  <input type="number" id="fibonacciInput" min="0">
+  <input type="number" id="fibonacciOuput">
+  <button onclick="fibonacciOutput.value=fibonacci(fibonacciInput.value)">Calculate Fibonacci term</button>
+  <div id="resultFibonacci"></div>
+<script>
+        function factorial(n) {
+            if (n < 0) return -1;
+            if (n === 0) return 1;
+            return n * factorial(n - 1);
         }
+  function fibonacci(n) {
+    if (n < 0) return -1;
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
     </script>
-  </head>
-  <body>
-    Factorial calculator
-    <input id="factorial-box"></input>
-    <input id="factorial-outputbox"></input>
-    <button onclick="factorial-ouputbox.value=factorial(factorial-box.value)">Calculate</button>
-  </body>
+</body>
 </html>
