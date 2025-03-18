@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+      function factorial(inti)
+        {
+          if(i==1)
+          {
+            return 1;
+          }else
+          {
+            return i*factorial(i-1);
+          }
+        }
+    </script>
+  </head>
+  <body>
+    Factorial calculator
+    <input id="factorial-box"></input>
+    <input id="factorial-outputbox"></input>
+    <button onclick="factorial-ouputbox.value=factorial(factorial-box.value)">Calculate</button>
+  </body>
+</html>
